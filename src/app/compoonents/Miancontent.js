@@ -319,6 +319,10 @@ const MainContent = () => {
                   <option value=""></option>
                   <option value="Afghanistan">Afghanistan</option>
                   <option value="india">India</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Japan">Japan</option>
+                  <option value="unitedstates">United States</option>
                   {/* Add more options for passport nationality */}
                 </select>
               </div>

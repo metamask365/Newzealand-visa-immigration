@@ -9,9 +9,9 @@ const Sidebar = () => {
       {/* Sidebar content */}
       <h3 style={{fontSize: '13px', fontWeight:'600', color: '#09c', paddingBottom: '10px'}}>VisaView</h3>
       <ul>
-        <li style={{fontSize: '12px', fontWeight:'500', paddingBottom: '5px'}}><a href=''>Register Organization</a></li>
-        <li style={{fontSize: '12px', fontWeight:'500', paddingBottom: '5px'}}><a href='#'>Verify Visa Record</a></li>
-        <li style={{fontSize: '12px', fontWeight:'500', paddingBottom: '5px'}}><a href='#'>My Visa Verification <br></br>Service Account</a></li>
+        <li style={{fontSize: '12px', fontWeight:'500', paddingBottom: '5px'}}><a href='https://visaview.immigration.govt.nz/organization/selectOrgTypeToRegister.aspx'>Register Organization</a></li>
+        <li style={{fontSize: '12px', fontWeight:'500', paddingBottom: '5px'}}><a href='https://visaview.immigration.govt.nz/workentitlement/visaVerficationQuery.aspx'>Verify Visa Record</a></li>
+        <li style={{fontSize: '12px', fontWeight:'500', paddingBottom: '5px'}}><a href='https://visaview.immigration.govt.nz/vvs/viewMyAccount.aspx'>My Visa Verification <br></br>Service Account</a></li>
         {/* Add more sidebar links as needed */}
       </ul>
     </div>
