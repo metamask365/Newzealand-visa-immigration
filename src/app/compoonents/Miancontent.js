@@ -224,6 +224,7 @@ const MainContent = () => {
     // Your form state
   });
   const [userData, setUserData] = React.useState(null);
+  const [userNotFound, setUserNotFound] = React.useState(false);
 
   // Define your user data
   const userDatabase = [
@@ -241,9 +242,10 @@ const MainContent = () => {
 
     if (foundUser) {
       setUserData(foundUser); // Set user data if found
+      setUserNotFound(false); // Reset user not found status
     } else {
-      // Handle case where user is not found
-      alert('User not found');
+      // Set user not found status
+      setUserNotFound(true);
     }
   };
   return (
@@ -309,6 +311,11 @@ const MainContent = () => {
               </div>
             ) : (
           <div className='mainform'>
+            {userNotFound && (
+              <div className="user-not-found-message">
+                The details you have entered do not match a current visa issued by INZ. Please check the information provided.
+              </div>
+            )}
             <form onSubmit={handleSubmit}>
               <div className='formin'>
                 <label>Family Name</label>
