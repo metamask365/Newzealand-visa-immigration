@@ -280,31 +280,32 @@ const MainContent = () => {
           {userData ? (
               <div className='userdata'>
                 {/* Render user data */}
-                <h3>Result</h3>
+                <h3 style={{paddingTop:'20px'}}>Result</h3>
                 <p>The visa has been verified successfully using the details you provided. See below for the full conditions of the visa. <br></br><br></br>Visa Verification Service checks are valid for the date stated on the enquiry result. Visa information may change.<br></br><br></br>All dates given are in New Zealand time. Where a person is not yet in New Zealand, any visa they hold may be subject to the grant of entry permission.</p>
                 <h2 style={{paddingTop:'20px'}}>Visa Details</h2>
                 <div className='userdatamain' style={{display:'flex', gap:'20px'}}>
                 <div className='userdatain'>
-                <p>Name: {userData.familyfirstname}</p>
-                <p>Passport Number: {userData.passportnumber}</p>
-                <p>Nationality: {userData.nationality}</p>
-                <p>Date of Birth: {userData.dateOfBirth}</p>
-                <p>Gender: {userData.gender}</p>
-                <p>INZ CLIENT NUMBER: {userData.INZCLIENTNUMBER}</p>
+                <p><strong>Name:</strong> {userData.familyfirstname}</p>
+                <p><strong>Passport Number:</strong> {userData.passportnumber}</p>
+                <p><strong>Nationality:</strong> {userData.nationality}</p>
+                <p><strong>Date of Birth:</strong> {userData.dateOfBirth}</p>
+                <p><strong>Gender:</strong> {userData.gender}</p>
+                <p><strong>INZ CLIENT NUMBER:</strong> {userData.INZCLIENTNUMBER}</p>
                 </div>
                 <div className='userdatain'>
-                <p>Visa Type: {userData.VISATYPE}</p>
+                <p><strong>Visa Type:</strong> {userData.VISATYPE}</p>
                 {/* <p>Passport Number: {userData.VISATYPE}</p> */}
-                <p>Visa Start Date: {userData.visaStartDate}</p>
-                <p>First Entry Before: {userData.FIRSTENTERYBEFOR}</p>
-                <p>No Of Entries: {userData.NOOFENTRIES}</p>
-                <p>Visa Start Date: {userData.visaStartDate}</p>
+                <p><strong>Visa Start Date:</strong> {userData.visaStartDate}</p>
+                <p><strong>First Entry Before:</strong> {userData.FIRSTENTERYBEFOR}</p>
+                <p><strong>No Of Entries:</strong> {userData.NOOFENTRIES}</p>
+                {/* <p><strong>Visa Start Date:</strong> {userData.visaStartDate}</p> */}
                 </div>
                 </div>
-                <p style={{paddingTop:'20px'}}>Financial support evidence not required..May not be placed in a triangular employment arrangement with a controlling third party..Must be paid at or above $ 29.66 per hour..Must provide evidence of remuneration if requested..Return/onward ticket not required..Stay subject to grant of entry permission..The holder may only work as Retail Assistant in Auckland for EXPRESS MART LIMITED..The holder of this visa must comply with any instruction from a Medical Officer of Health which relates to a notifiable or quarantinable disease..The holder of this visa must comply with any order made under section 11 of the COVID-19 Public Health Response Act 2020..The holder of this visa must comply with any order made under section 70 of the Health Act 1956 and listed in schedule 2 of the COVID-19 Public He..
+                <p style={{paddingTop:'20px',color:'#09c'}}>Financial support evidence not required..May not be placed in a triangular employment arrangement with a controlling third party..Must be paid at or above $ 29.66 per hour..Must provide evidence of remuneration if requested..Return/onward ticket not required..Stay subject to grant of entry permission..The holder may only work as Retail Assistant in Auckland for EXPRESS MART LIMITED..The holder of this visa must comply with any instruction from a Medical Officer of Health which relates to a notifiable or quarantinable disease..The holder of this visa must comply with any order made under section 11 of the COVID-19 Public Health Response Act 2020..The holder of this visa must comply with any order made under section 70 of the Health Act 1956 and listed in schedule 2 of the COVID-19 Public He..</p><p>
 <br></br>Enquiry Date18/03/2024
-<br></br>Valid as at18/03/2024
+<br></br><br></br>Valid as at18/03/2024
 <br></br><br></br>Warning: if you download this visa information, you must ensure that you treat the personal information it contains in accordance with the Privacy Act 2020, including with respect to storage, access, disclosure to third parties, retention and disposal.</p>
+<button className='downbtn'> Download Result</button>
               </div>
             ) : (
           <div className='mainform'>
