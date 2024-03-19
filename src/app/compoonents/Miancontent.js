@@ -213,6 +213,8 @@ import React, { useState } from 'react';
 import "./maincontent.css";
 import Sidebar from './Sidebar';
 import dynamic from 'next/dynamic';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 // Add the "use client" directive at the top of the file
 // @ts-ignore
@@ -226,9 +228,21 @@ const MainContent = () => {
   const [userData, setUserData] = React.useState(null);
   const [userNotFound, setUserNotFound] = React.useState(false);
 
+  const currentDate = new Date();
+
+  // Format date to "20 March 2024" format
+  const formattedDate = currentDate.toLocaleDateString('en-US', {
+    month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+  });
   // Define your user data
   const userDatabase = [
-    { passportnumber: 'AV5548101', familyfirstname: 'MUHAMMAD SUFYAN', FIRSTENTERYBEFOR: "25/04/2023",INZCLIENTNUMBER: "84567704", VISATYPE: "WORK",VISAEXPIRY:"25/07/2024", NOOFENTRIES: "25", nationality: 'Pakistan', dateOfBirth: '1994-05-01', gender: 'Male', visaStartDate: '2024-01-01', applicationnumber: 'E6577901' }
+    { passportnumber: 'AV5548101', familyfirstname: 'MUHAMMAD SUFYAN', FIRSTENTERYBEFOR: "17 June 2024",INZCLIENTNUMBER: "84567704", VISATYPE: "WORK",VISAEXPIRY:"16  March 2026", NOOFENTRIES: "25",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }), nationality: 'Pakistan', dateOfBirth: '01 May 1994', gender: 'Male', visaStartDate: '18 March 2024', applicationnumber: 'E6577901' }
     // Add more user data as needed
   ];
 
@@ -246,6 +260,16 @@ const MainContent = () => {
       // Set user not found status
       setUserNotFound(true);
     }
+  };
+  const [dateOfBirth, setDateOfBirth] = useState(null);
+  const [visaStartDate, setVisaStartDate] = useState(null);
+
+  const handleDateOfBirthChange = date => {
+    setDateOfBirth(date);
+  };
+
+  const handleVisaStartDateChange = date => {
+    setVisaStartDate(date);
   };
   return (
     <div className='maincontentsid'>
@@ -299,14 +323,17 @@ const MainContent = () => {
                 <p><strong>Visa Start Date:</strong> {userData.visaStartDate}</p>
                 <p><strong>First Entry Before:</strong> {userData.FIRSTENTERYBEFOR}</p>
                 <p><strong>No Of Entries:</strong> {userData.NOOFENTRIES}</p>
-                <p><strong>application Number:</strong> {userData.applicationnumber}</p>
+                <p><strong>Application Number:</strong> {userData.applicationnumber}</p>
+                <p><strong>Visa Enquiry Date:</strong> {userData.Visaenquirydate}</p>
+                {/* <p><strong>Visa Conditions</strong> </p> */}
                 {/* <p><strong>Visa Start Date:</strong> {userData.visaStartDate}</p> */}
                 </div>
                 </div>
-                <p style={{paddingTop:'20px',color:'#09c'}}>Financial support evidence not required..May not be placed in a triangular employment arrangement with a controlling third party..Must be paid at or above $ 29.66 per hour..Must provide evidence of remuneration if requested..Return/onward ticket not required..Stay subject to grant of entry permission..The holder may only work as Retail Assistant in Auckland for EXPRESS MART LIMITED..The holder of this visa must comply with any instruction from a Medical Officer of Health which relates to a notifiable or quarantinable disease..The holder of this visa must comply with any order made under section 11 of the COVID-19 Public Health Response Act 2020..The holder of this visa must comply with any order made under section 70 of the Health Act 1956 and listed in schedule 2 of the COVID-19 Public He..</p><p>
-<br></br>Enquiry Date18/03/2024
-<br></br><br></br>Valid as at18/03/2024
-<br></br><br></br>Warning: if you download this visa information, you must ensure that you treat the personal information it contains in accordance with the Privacy Act 2020, including with respect to storage, access, disclosure to third parties, retention and disposal.</p>
+                <div className='visacon'>
+                <p style={{paddingTop:'15px',color:'#09c'}}>Financial support evidence not required..May not be placed in a triangular employment arrangement with a controlling third party..Must be paid at or above $ 29.66 per hour..Must provide evidence of remuneration if requested..Return/onward ticket not required..Stay subject to grant of entry permission..The holder may only work as Retail Assistant in Auckland for EXPRESS MART LIMITED..The holder of this visa must comply with any instruction from a Medical Officer of Health which relates to a notifiable or quarantinable disease..The holder of this visa must comply with any order made under section 11 of the COVID-19 Public Health Response Act 2020..The holder of this visa must comply with any order made under section 70 of the Health Act 1956 and listed in schedule 2 of the COVID-19 Public He..</p>
+<p style={{marginTop:"20px", marginBottom:"10px"}}>Enquiry Date <strong style={{color:"#09c", marginLeft:"30px"}}>{formattedDate}</strong></p>
+<p style={{marginBottom:"30px"}}>Valid as <strong style={{color:"#09c", marginLeft:"60px"}}>{formattedDate}</strong></p>
+<p style={{marginBottom:'20px'}}>Warning: if you download this visa information, you must ensure that you treat the personal information it contains in accordance with the Privacy Act 2020, including with respect to storage, access, disclosure to third parties, retention and disposal.</p></div>
 <button className='downbtn'> Download Result</button>
               </div>
             ) : (
@@ -317,51 +344,97 @@ const MainContent = () => {
               </div>
             )}
             <form onSubmit={handleSubmit}>
-              <div className='formin'>
-                <label>Family Name</label>
-                <input type='text' name='familyname' required />
-              </div>
-              <div className='formin'>
-                <label>Passport Nationality</label>
-                <select className="" name="NationalityControl" id="NationalityControl" tabIndex="2" required>
-                  <option value=""></option>
-                  <option value="Afghanistan">Afghanistan</option>
-                  <option value="india">India</option>
-                  <option value="Australia">Australia</option>
-                  <option value="Germany">Germany</option>
-                  <option value="Japan">Japan</option>
-                  <option value="unitedstates">United States</option>
-                  <option value="pakistan">Pakistan</option>
-                  {/* Add more options for passport nationality */}
-                </select>
-              </div>
-              <div className='formin'>
-                <label>Passport Number</label>
-                <input type='text' name='passportnumber' required onChange={(e) => setFormData({ ...formData, passportnumber: e.target.value })} />
-              </div>
-              <div className='formin'>
-                <label>Date Of Birth</label>
-                <input type='date' name='passportnumber' required />
-              </div>
-              <div className='formin'>
-                <label>Gender</label>
-                <select className="" name="NationalityControl" id="NationalityControl" tabIndex="2" required>
-                  <option value=""></option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  {/* Add more options for passport nationality */}
-                </select>
-              </div>
-              <div className='formin'>
-                <label>Visa Start Date</label>
-                <input type='date' name='passportnumber' required />
-              </div>
-              <div className='formin'>
-                <input id="chkVisaConsent" type="checkbox" tabIndex="8" name="chkVisaConsent" required />
-                <label htmlFor="chkVisaConsent">The visa holder has consented to this check.</label>
-              </div>
-              <button type='submit'>Check Visa</button>
-            </form>
+  <div className='formin'>
+    <label>Family Name <span style={{ color: 'red' }}>*</span></label>
+    <input type='text' name='familyname' required />
+  </div>
+  <div className='formin passhun'>
+    <label>Passport Nationality <span style={{ color: 'red' }}>*</span></label>
+    <select className="" name="NationalityControl" id="NationalityControl" tabIndex="2" required>
+      <option value=""></option>
+      <option value="Afghanistan">Afghanistan</option>
+      <option value="india">India</option>
+      <option value="Australia">Australia</option>
+      <option value="Germany">Germany</option>
+      <option value="Japan">Japan</option>
+      <option value="unitedstates">United States</option>
+      <option value="pakistan">Pakistan</option>
+      {/* Add more options for passport nationality */}
+    </select>
+  </div>
+  <div className='formin passtwo'>
+    <label>Passport Number <span style={{ color: 'red' }}>*</span></label>
+    <input type='text' name='passportnumber' required onChange={(e) => setFormData({ ...formData, passportnumber: e.target.value })} />
+  </div>
+  <div className='formin passtwo pasmar'>
+  <label>Date Of Birth<br />dd/mm/yyyy <span style={{ color: 'red' }}>*</span></label>
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          <DatePicker
+            selected={dateOfBirth}
+            onChange={handleDateOfBirthChange}
+            dateFormat="dd/MM/yyyy"
+            placeholderText=""
+            showYearDropdown
+            scrollableYearDropdown
+          />
+        </div>
+        <img
+          src="https://visaviews-immigratons-gov-nz.vercel.app/_next/image?url=%2Fimages%2Ficon-calendar.gif&w=16&q=75"
+          alt="Calendar"
+          style={{
+            position: 'relative',
+            left: '5px',
+            width: '15px',
+            top: '5px',
+            height: '15px',
+            cursor: 'pointer'
+          }}
+          onClick={() => document.querySelector('.react-datepicker-wrapper input').click()}
+        />
+
+  </div>
+  <div className='formin passtwo'>
+    <label>Gender <span style={{ color: 'red' }}>*</span></label>
+    <select className="" name="NationalityControl" id="NationalityControl" tabIndex="2" required>
+      <option value=""></option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      {/* Add more options for passport nationality */}
+    </select>
+  </div>
+  <div className='formin passtwo pasmar'>
+  <label>Visa Start Date<br />dd/mm/yyyy <span style={{ color: 'red' }}>*</span></label>
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          <DatePicker
+            selected={visaStartDate}
+            onChange={handleVisaStartDateChange}
+            dateFormat="dd/MM/yyyy"
+            placeholderText=""
+            showYearDropdown
+            scrollableYearDropdown
+          />
+        </div>
+        <img
+          src="https://visaviews-immigratons-gov-nz.vercel.app/_next/image?url=%2Fimages%2Ficon-calendar.gif&w=16&q=75"
+          alt="Calendar"
+          style={{
+            position: 'relative',
+            left: '5px',
+            top: '5px',
+            width: '15px',
+            height: '15px',
+            cursor: 'pointer'
+          }}
+          onClick={() => document.querySelector('.react-datepicker-wrapper input').click()}
+        />
+  </div>
+  <div className='formin'>
+    <input id="chkVisaConsent" type="checkbox" tabIndex="8" name="chkVisaConsent" required />
+    <label className='visaholder' htmlFor="chkVisaConsent" style={{lineHeight:"inherit", marginBottom:"25px"}}>The visa holder has consented to this check.</label>
+  </div>
+  <button type='submit'>Check Visa</button>
+</form>
+
             
           </div>
           )}

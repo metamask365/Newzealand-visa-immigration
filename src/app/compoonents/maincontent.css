@@ -46,11 +46,21 @@
     padding-top: 10px;
 }
 .mainform {
-    padding: 50px 0px;
+    padding: 20px 0px 90px 0px;
+}
+.userdatain p {
+    color: #09c;
+}
+.visacon strong {
+    font-weight: 500 !important;
+    font-size: 11px !important;
 }
 .formin {
-    padding-bottom: 15px;
+    padding-bottom: 6px;
     display: flex;
+}
+.formin.passtwo.pasmar {
+    margin-bottom: 15px;
 }
 .formin label {
     font-size: 12px;
@@ -59,15 +69,26 @@
     /* display: flex; */
 }
 .formin input {
-    border: 1px solid;
-    font-size: 12px;
-    /* margin-left: 50px; */
+        border: 1px solid;
+        font-size: 12px;
+        /* margin-right: 0.25em; */
+        /* width: 18em; */
+        border: 1px solid #aaa;
+        padding: 3px;
+        border-radius: 3px;
+        height: 20px;
+        /* margin-left: 50px; */
 }
+
 .formin label {
     font-size: 12px;
     /* margin-right: 50px; */
-    width: 265px;
+    width: 150px;
+    line-height: 12px;
     /* display: flex; */
+}
+label.visaholder {
+    width: 100%;
 }
 .userdatain {
     width: 50%;
@@ -92,10 +113,28 @@ button.downbtn {
 }
 .formin select {
     border: 1px solid;
-    width: 162px;
+        font-size: 12px;
+        /* margin-right: 0.25em; */
+        /* width: 18em; */
+        border: 1px solid #aaa;
+        padding: 3px;
+        border-radius: 3px;
+        /* margin-left: 50px; */
 }
-.formin input[type="date"] {
-    width: 162px;
+.formin.passhun select {
+    width: 170px;
+    height: 20px;
+}
+.formin.passtwo select {
+    width: 100px;
+    height: 20px;
+}
+.formin.passtwo input {
+    width: 100px;
+    height: 20px;
+}
+.formin input[type="date"]::placeholder {
+    display: none;
 }
 .mainform button {
     background: #09c;
