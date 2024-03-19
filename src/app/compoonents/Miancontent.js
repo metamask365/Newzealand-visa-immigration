@@ -228,8 +228,7 @@ const MainContent = () => {
 
   // Define your user data
   const userDatabase = [
-    { passportnumber: '123456',INZCLIENTNUMBER: "80158551", VISATYPE: "WORK",NOOFENTRIES: "25",FIRSTENTERYBEFOR: "25/04/2023", VISAEXPIRY:"25/07/2024",  familyfirstname: 'John Doe', nationality: 'US', dateOfBirth: '1990-01-01', gender: 'male', visaStartDate: '2024-01-01' },
-    { passportnumber: 'Z76651', familyfirstname: 'John Doe', FIRSTENTERYBEFOR: "25/04/2023",INZCLIENTNUMBER: "80158551", VISATYPE: "WORK",VISAEXPIRY:"25/07/2024", NOOFENTRIES: "25", nationality: 'US', dateOfBirth: '1990-01-01', gender: 'male', visaStartDate: '2024-01-01' }
+    { passportnumber: 'AV5548101', familyfirstname: 'MUHAMMAD SUFYAN', FIRSTENTERYBEFOR: "25/04/2023",INZCLIENTNUMBER: "84567704", VISATYPE: "WORK",VISAEXPIRY:"25/07/2024", NOOFENTRIES: "25", nationality: 'Pakistan', dateOfBirth: '1994-05-01', gender: 'Male', visaStartDate: '2024-01-01', applicationnumber: 'E6577901' }
     // Add more user data as needed
   ];
 
@@ -300,6 +299,7 @@ const MainContent = () => {
                 <p><strong>Visa Start Date:</strong> {userData.visaStartDate}</p>
                 <p><strong>First Entry Before:</strong> {userData.FIRSTENTERYBEFOR}</p>
                 <p><strong>No Of Entries:</strong> {userData.NOOFENTRIES}</p>
+                <p><strong>application Number:</strong> {userData.applicationnumber}</p>
                 {/* <p><strong>Visa Start Date:</strong> {userData.visaStartDate}</p> */}
                 </div>
                 </div>
@@ -331,6 +331,7 @@ const MainContent = () => {
                   <option value="Germany">Germany</option>
                   <option value="Japan">Japan</option>
                   <option value="unitedstates">United States</option>
+                  <option value="pakistan">Pakistan</option>
                   {/* Add more options for passport nationality */}
                 </select>
               </div>
