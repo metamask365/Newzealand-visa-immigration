@@ -238,7 +238,7 @@ const MainContent = () => {
   });
   // Define your user data
   const userDatabase = [
-    { passportnumber: 'AV5548101', familyfirstname: 'MUHAMMAD SUFYAN', FIRSTENTERYBEFOR: "17 June 2024",INZCLIENTNUMBER: "84567704", VISATYPE: "WORK",VISAEXPIRY:"16  March 2026", NOOFENTRIES: "25",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+    { passportnumber: 'AV5548101', familyfirstname: 'MUHAMMAD, SUFYAN', FIRSTENTERYBEFOR: "17 June 2024",INZCLIENTNUMBER: "84567704", VISATYPE: "WORK",VISAEXPIRY:"16  March 2026", NOOFENTRIES: "25",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
@@ -310,29 +310,29 @@ const MainContent = () => {
                 <h2 style={{paddingTop:'20px'}}>Visa Details</h2>
                 <div className='userdatamain' style={{display:'flex', gap:'20px'}}>
                 <div className='userdatain'>
-                <p><strong>Name:</strong> {userData.familyfirstname}</p>
-                <p><strong>Passport Number:</strong> {userData.passportnumber}</p>
-                <p><strong>Nationality:</strong> {userData.nationality}</p>
-                <p><strong>Date of Birth:</strong> {userData.dateOfBirth}</p>
-                <p><strong>Gender:</strong> {userData.gender}</p>
-                <p><strong>INZ CLIENT NUMBER:</strong> {userData.INZCLIENTNUMBER}</p>
+                <p><strong>Family, First Name</strong> {userData.familyfirstname}</p>
+                <p><strong>Date of Birth</strong> {userData.dateOfBirth}</p>
+                <p><strong>Gender</strong> {userData.gender}</p>
+                <p><strong>Passport Nationality</strong> {userData.nationality}</p>
+                <p><strong>Passport Number</strong> {userData.passportnumber}</p>
+                <p><strong>INZ CLIENT NUMBER</strong> {userData.INZCLIENTNUMBER}</p>
                 </div>
                 <div className='userdatain'>
-                <p><strong>Visa Type:</strong> {userData.VISATYPE}</p>
+                <p><strong>Visa Type</strong> {userData.VISATYPE}</p>
                 {/* <p>Passport Number: {userData.VISATYPE}</p> */}
-                <p><strong>Visa Start Date:</strong> {userData.visaStartDate}</p>
-                <p><strong>First Entry Before:</strong> {userData.FIRSTENTERYBEFOR}</p>
-                <p><strong>No Of Entries:</strong> {userData.NOOFENTRIES}</p>
-                <p><strong>Application Number:</strong> {userData.applicationnumber}</p>
-                <p><strong>Visa Enquiry Date:</strong> {userData.Visaenquirydate}</p>
+                <p><strong>Visa Start Date</strong> {userData.visaStartDate}</p>
+                <p><strong>First Entry Before</strong> {userData.FIRSTENTERYBEFOR}</p>
+                <p><strong>No Of Entries</strong> {userData.NOOFENTRIES}</p>
+                <p><strong>Expiry Date Travel</strong> {userData.VISAEXPIRY}</p>
+                <p><strong>Visa Expiry</strong> {userData.VISAEXPIRY}</p>
                 {/* <p><strong>Visa Conditions</strong> </p> */}
                 {/* <p><strong>Visa Start Date:</strong> {userData.visaStartDate}</p> */}
                 </div>
                 </div>
                 <div className='visacon'>
-                <p style={{paddingTop:'15px',color:'#09c'}}>Financial support evidence not required..May not be placed in a triangular employment arrangement with a controlling third party..Must be paid at or above $ 29.66 per hour..Must provide evidence of remuneration if requested..Return/onward ticket not required..Stay subject to grant of entry permission..The holder may only work as Retail Assistant in Auckland for EXPRESS MART LIMITED..The holder of this visa must comply with any instruction from a Medical Officer of Health which relates to a notifiable or quarantinable disease..The holder of this visa must comply with any order made under section 11 of the COVID-19 Public Health Response Act 2020..The holder of this visa must comply with any order made under section 70 of the Health Act 1956 and listed in schedule 2 of the COVID-19 Public He..</p>
+                <p style={{paddingTop:'5px',color:'#09c'}}>Financial support evidence not required..May not be placed in a triangular employment arrangement with a controlling third party..Must be paid at or above $ 29.66 per hour..Must provide evidence of remuneration if requested..Return/onward ticket not required..Stay subject to grant of entry permission..The holder may only work as Retail Assistant in Auckland for EXPRESS MART LIMITED..The holder of this visa must comply with any instruction from a Medical Officer of Health which relates to a notifiable or quarantinable disease..The holder of this visa must comply with any order made under section 11 of the COVID-19 Public Health Response Act 2020..The holder of this visa must comply with any order made under section 70 of the Health Act 1956 and listed in schedule 2 of the COVID-19 Public He..</p>
 <p style={{marginTop:"20px", marginBottom:"10px"}}>Enquiry Date <strong style={{color:"#09c", marginLeft:"30px"}}>{formattedDate}</strong></p>
-<p style={{marginBottom:"30px"}}>Valid as <strong style={{color:"#09c", marginLeft:"60px"}}>{formattedDate}</strong></p>
+<p style={{marginBottom:"30px"}}>Valid as <strong style={{color:"#09c", marginLeft:"57px"}}>{formattedDate}</strong></p>
 <p style={{marginBottom:'20px'}}>Warning: if you download this visa information, you must ensure that you treat the personal information it contains in accordance with the Privacy Act 2020, including with respect to storage, access, disclosure to third parties, retention and disposal.</p></div>
 <button className='downbtn'> Download Result</button>
               </div>
