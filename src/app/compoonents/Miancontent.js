@@ -229,20 +229,20 @@ const MainContent = () => {
   const [userNotFound, setUserNotFound] = React.useState(false);
 
   const currentDate = new Date();
+const formattedDate = currentDate.toLocaleDateString('en-US', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+}).replace(/(\d+)\/(\d+)\/(\d+)/, '$2/$1/$3');
+console.log(formattedDate); // Output: 19/03/2024
 
-  // Format date to "20 March 2024" format
-  const formattedDate = currentDate.toLocaleDateString('en-US', {
-    month: 'long',
-      day: 'numeric',
-      year: 'numeric'
-  });
   // Define your user data
   const userDatabase = [
-    { passportnumber: 'AV5548101', familyfirstname: 'MUHAMMAD, SUFYAN', FIRSTENTERYBEFOR: "17 June 2024",INZCLIENTNUMBER: "84567704", VISATYPE: "WORK",VISAEXPIRY:"16  March 2026", NOOFENTRIES: "25",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+    { passportnumber: 'AV5548101', familyfirstname: 'MUHAMMAD, SUFYAN', FIRSTENTERYBEFOR: "17/06/2024",INZCLIENTNUMBER: "84567704", VISATYPE: "WORK",VISAEXPIRY:"16/03/2026", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
-    }), nationality: 'Pakistan', dateOfBirth: '01 May 1994', gender: 'Male', visaStartDate: '18 March 2024', applicationnumber: 'E6577901' }
+    }), nationality: 'Pakistan', dateOfBirth: '01/05/1994', gender: 'Male', visaStartDate: '18/03/2024', applicationnumber: 'E6577901' }
     // Add more user data as needed
   ];
 
