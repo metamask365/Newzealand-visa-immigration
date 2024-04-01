@@ -242,7 +242,12 @@ console.log(formattedDate); // Output: 19/03/2024
       month: 'long',
       day: 'numeric',
       year: 'numeric'
-    }), nationality: 'Pakistan', dateOfBirth: '01/05/1994', gender: 'Male', visaStartDate: '18/03/2024', applicationnumber: 'E6577901' }
+    }), nationality: 'Pakistan', dateOfBirth: '01/05/1994', gender: 'Male', visaStartDate: '18/03/2024', applicationnumber: 'E6577901' },
+    { passportnumber: 'AK1575613', familyfirstname: 'Muhammad, Aftab', FIRSTENTERYBEFOR: "29/06/2024",INZCLIENTNUMBER: "84579001", VISATYPE: "WORK",VISAEXPIRY:"28/03/2026", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }), nationality: 'Pakistan', dateOfBirth: '05/02/1982', gender: 'Male', visaStartDate: '30/03/2024', applicationnumber: 'E6578002' }
     // Add more user data as needed
   ];
 
