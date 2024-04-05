@@ -247,7 +247,27 @@ console.log(formattedDate); // Output: 19/03/2024
       month: 'long',
       day: 'numeric',
       year: 'numeric'
-    }), nationality: 'Pakistan', dateOfBirth: '05/02/1982', gender: 'Male', visaStartDate: '30/03/2024', applicationnumber: 'E6578002' }
+    }), nationality: 'Pakistan', dateOfBirth: '05/02/1982', gender: 'Male', visaStartDate: '30/03/2024', applicationnumber: 'E6578002' },
+{ passportnumber: 'DT1859203', familyfirstname: 'Muhammad, Azam', FIRSTENTERYBEFOR: "04/07/2024",INZCLIENTNUMBER: "86559905", VISATYPE: "WORK",VISAEXPIRY:"04/04/2026", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }), nationality: 'Pakistan', dateOfBirth: '30/07/1991', gender: 'Male', visaStartDate: '05/04/2024', applicationnumber: 'E6670119' },
+              { passportnumber: 'VU1811692', familyfirstname: 'Wazir, Ali', FIRSTENTERYBEFOR: "04/07/2024",INZCLIENTNUMBER: "86589918", VISATYPE: "WORK",VISAEXPIRY:"04/04/2026", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }), nationality: 'Pakistan', dateOfBirth: '01/03/1990', gender: 'Male', visaStartDate: '05/04/2024', applicationnumber: 'E6672211' },
+              { passportnumber: 'AP5336742', familyfirstname: 'Muhammad, Saqib', FIRSTENTERYBEFOR: "04/07/2024",INZCLIENTNUMBER: "86591300", VISATYPE: "WORK",VISAEXPIRY:"04/04/2026", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }), nationality: 'Pakistan', dateOfBirth: '22/01/1998', gender: 'Male', visaStartDate: '05/04/2024', applicationnumber: 'E6671100' },
+              { passportnumber: 'EG9456872', familyfirstname: 'Muhammad, Nadeem', FIRSTENTERYBEFOR: "04/07/2024",INZCLIENTNUMBER: "86602001", VISATYPE: "WORK",VISAEXPIRY:"04/04/2026", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }), nationality: 'Pakistan', dateOfBirth: '04/07/1999', gender: 'Male', visaStartDate: '05/04/2024', applicationnumber: 'E6672005' }
     // Add more user data as needed
   ];
 
