@@ -317,17 +317,17 @@ console.log(formattedDate); // Output: 19/03/2024
       month: 'long',
       day: 'numeric',
       year: 'numeric'
-    }), nationality: 'Pakistan', dateOfBirth: '22/01/1998', gender: 'Male', visaStartDate: '17/07/2024', applicationnumber: 'E6895076' }
+    }), nationality: 'Pakistan', dateOfBirth: '22/01/1998', gender: 'Male', visaStartDate: '17/07/2024', applicationnumber: 'E6895076' },
               { passportnumber: 'ST9890901', familyfirstname: 'Raza, Aamir', FIRSTENTERYBEFOR: "30/09/2024",INZCLIENTNUMBER: "89465690", VISATYPE: "WORK",VISAEXPIRY:"15/01/2025", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
-    }), nationality: 'Pakistan', dateOfBirth: '11/02/1998', gender: 'Male', visaStartDate: '06/08/2024', applicationnumber: 'E6896870' }
+    }), nationality: 'Pakistan', dateOfBirth: '11/02/1998', gender: 'Male', visaStartDate: '06/08/2024', applicationnumber: 'E6896870' },
             { passportnumber: 'PX1160602', familyfirstname: 'Ahmad, Farooq', FIRSTENTERYBEFOR: "10/10/2024",INZCLIENTNUMBER: "89465486", VISATYPE: "WORK",VISAEXPIRY:"17/01/2023", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
-    }), nationality: 'Pakistan', dateOfBirth: '05/06/1991', gender: 'Male', visaStartDate: '12/08/2024', applicationnumber: 'E6895436' }
+    }), nationality: 'Pakistan', dateOfBirth: '05/06/1991', gender: 'Male', visaStartDate: '12/08/2024', applicationnumber: 'E6895436' },
     // Add more user data as needed
   ];
 
