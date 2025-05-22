@@ -353,12 +353,12 @@ console.log(formattedDate); // Output: 19/03/2024
       day: 'numeric',
       year: 'numeric'
     }), nationality: 'Pakistan', dateOfBirth: '08/12/1989', gender: 'Male', visaStartDate: '03/04/2025', applicationnumber: 'E6899784' },
-              { passportnumber: 'PA1075532', familyfirstname: 'Abdullah, Malik', FIRSTENTERYBEFOR: "29/03/2025",INZCLIENTNUMBER: "84786795", VISATYPE: "WORK",VISAEXPIRY:"29/01/2027", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+              { passportnumber: 'PA1075532', familyfirstname: 'Abdullah, Malik', FIRSTENTERYBEFOR: "02/06/2025",INZCLIENTNUMBER: "84786795", VISATYPE: "WORK",VISAEXPIRY:"29/01/2027", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
     }), nationality: 'Pakistan', dateOfBirth: '05/03/1998', gender: 'Male', visaStartDate: '30/01/2025', applicationnumber: 'E6857870' },
-              { passportnumber: 'PZ4122603', familyfirstname: 'Khan, Bilal', FIRSTENTERYBEFOR: "29/04/2025",INZCLIENTNUMBER: "84786523", VISATYPE: "WORK",VISAEXPIRY:"29/01/2027", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
+              { passportnumber: 'PZ4122603', familyfirstname: 'Khan, Bilal', FIRSTENTERYBEFOR: "02/06/2025",INZCLIENTNUMBER: "84786523", VISATYPE: "WORK",VISAEXPIRY:"29/01/2027", NOOFENTRIES: "Multiple Entries",  Visaenquirydate: new Date().toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
       year: 'numeric'
